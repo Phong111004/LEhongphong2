@@ -1,4 +1,4 @@
-using eTickets.Data;
+﻿using eTickets.Data;
 using eTickets.Data.Cart;
 using eTickets.Data.Services;
 using eTickets.Models;
@@ -17,6 +17,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using eTickets.Services;
+
 
 namespace eTickets
 {
@@ -48,6 +50,10 @@ namespace eTickets
 
             // Configure VNPay
             services.AddScoped<IVnPayService,VNPayService>();
+
+
+            // Đăng ký EmailService
+            services.AddSingleton<EmailService>();
 
 
             //Authentication and authorization
